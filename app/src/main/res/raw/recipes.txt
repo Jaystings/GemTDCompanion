@@ -1,0 +1,25 @@
+Silver-chSapphire,chDiamond,chTopaz
+Malachite-chOpal,chEmerald,chAquamarine
+Star Ruby-chAmethyst,chRuby,flRuby
+Jade-Emerald,Opal,flSapphire
+Red Crystal-flessEmerald,Ruby,flAmethyst
+Dark Emerald-pEmerald,flessSapphire,flTopaz
+Yellow Sapphire-pSapphire,flessTopaz,flessRuby
+Blood Stone-pRuby,flessAquamarine,Amethyst
+Uranium 238-pTopaz,flOpal,Sapphire
+Gold-pAmethyst,flessAmethyst,flDiamond
+Pink Diamond-pDiamond,Topaz,Diamond
+Black Opal-pOpal,flessDiamond,Aquamarine
+Tourmaline-pAquamarine,flessOpal,flEmerald,flAquamarine
+Air Slate-Amethyst,flEmerald/flOpal/flRuby
+Slow Slate-Sapphire,flDiamond/flEmerald/flAquamarine
+Poison Slate-Emerald,flTopaz/flOpal/flAquamarine
+Range Slate-Ruby,flTopaz/flAmethyst/flRuby
+Hold Slate-Topaz,flAmethyst/flSapphire
+Opal Vein Slate-Opal,flTopaz/flRuby
+Spell Slate-Aquamarine,flDiamond/flAmethyst
+Damage Slate-Diamond,flSapphire/flOpal
+Ancient Slate-Air Slate,Hold Slate
+Wraith Slate-Slow Slate,Opal Vein Slate
+Elder Slate-Spell Slate,Poison Slate
+Viper Slate-Range Slate,Damage Slate

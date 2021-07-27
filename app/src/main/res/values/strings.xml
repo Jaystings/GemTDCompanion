@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">GemTD Companion</string>
+    <string name="title_activity_gem_entry">ScrollingActivity</string>
+
+    <string name="viewSpecialGems">View Special Gems</string>
+    <string name="enterGems">Enter More Gems</string>
+    <string name="rearrange">Rearrange Gems by Amount</string>
+    <string name="currentGems">Current Gems:</string>
+    <string name="noGems">You have no crafting gems. Build more, and then go to the previous page
+        and add some.
+    </string>
+
+    <string name="chSapphire">Chipped Sapphire</string>
+    <string name="chEmerald">Chipped Emerald</string>
+    <string name="chTopaz">Chipped Topaz</string>
+    <string name="chAquamarine">Chipped Aquamarine</string>
+    <string name="chDiamond">Chipped Diamond</string>
+    <string name="chOpal">Chipped Opal</string>
+    <string name="chAmethyst">Chipped Amethyst</string>
+    <string name="chRuby">Chipped Ruby</string>
+
+    <string name="flRuby">Flawed Ruby</string>
+    <string name="flSapphire">Flawed Sapphire</string>
+    <string name="flAmethyst">Flawed Amethyst</string>
+    <string name="flTopaz">Flawed Topaz</string>
+    <string name="flOpal">Flawed Opal</string>
+    <string name="flDiamond">Flawed Diamond</string>
+    <string name="flEmerald">Flawed Emerald</string>
+    <string name="flAquamarine">Flawed Aquamarine</string>
+
+    <string name="Emerald">Emerald</string>
+    <string name="Opal">Opal</string>
+    <string name="Ruby">Ruby</string>
+    <string name="Amethyst">Amethyst</string>
+    <string name="Sapphire">Sapphire</string>
+    <string name="Topaz">Topaz</string>
+    <string name="Diamond">Diamond</string>
+    <string name="Aquamarine">Aquamarine</string>
+
+    <string name="flessEmerald">Flawless Emerald</string>
+    <string name="flessSapphire">Flawless Sapphire</string>
+    <string name="flessTopaz">Flawless Topaz</string>
+    <string name="flessRuby">Flawless Ruby</string>
+    <string name="flessAquamarine">Flawless Aquamarine</string>
+    <string name="flessAmethyst">Flawless Amethyst</string>
+    <string name="flessDiamond">Flawless Diamond</string>
+    <string name="flessOpal">Flawless Opal</string>
+
+    <string name="pEmerald">Perfect Emerald</string>
+    <string name="pSapphire">Perfect Sapphire</string>
+    <string name="pRuby">Perfect Ruby</string>
+    <string name="pTopaz">Perfect Topaz</string>
+    <string name="pAmethyst">Perfect Amethyst</string>
+    <string name="pDiamond">Perfect Diamond</string>
+    <string name="pAquamarine">Perfect Aquamarine</string>
+    <string name="pOpal">Perfect Opal</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

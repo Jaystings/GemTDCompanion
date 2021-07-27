@@ -1,0 +1,1621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".GemEntry">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="gotoSpecial"
+            android:text="@string/viewSpecialGems" />
+
+        <Button
+            android:id="@+id/btnRearrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="rearrange"
+            android:text="Rearrange Gems by Amount" />
+
+        <ImageView
+            android:id="@+id/bar0"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:background="@color/gray"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".GemEntry"
+            tools:showIn="@layout/activity_gem_entry">
+
+            <LinearLayout
+                android:id="@+id/lovGems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/lohchSapphire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chSapphire"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchSapphire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chSapphireMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblChSapphireLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chSapphire" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohchDiamond"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chDiamond"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchDiamond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chDiamondMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblchDiamondLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chDiamond" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohchTopaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chTopaz"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchTopaz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chTopazMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblchTopazLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chTopaz" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohchOpal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chOpal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchOpal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chOpalMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblchOpalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chOpal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohchEmerald"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chEmerald"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchEmerald"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chEmeraldMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblchEmeraldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chEmerald" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohchAquamarine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chAquamarine"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchAquamarine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chAquamarineMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblchAquamarineLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chAquamarine" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohchAmethyst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chAmethyst"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchAmethyst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chAmethystMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblchAmethystLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chAmethyst" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohchRuby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chRuby"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblchRuby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/chRubyMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblchRubyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chRuby" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/gemBar0"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray"
+                    app:srcCompat="@android:drawable/bottom_bar" />
+
+                <LinearLayout
+                    android:id="@+id/lohflRuby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flRuby"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflRuby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flRubyMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflRubyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flRuby" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflSapphire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flSapphire"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflSapphire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flSapphireMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflSapphireLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flSapphire" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflAmethyst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flAmethyst"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflAmethyst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flAmethystMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflAmethystLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flAmethyst" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflTopaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flTopaz"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflTopaz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flTopazMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflTopazLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flTopaz" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflOpal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flOpal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflOpal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flOpalMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflOpalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flOpal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflDiamond"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flDiamond"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflDiamond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flDiamondMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflDiamondLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flDiamond" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflEmerald"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flEmerald"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflEmerald"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flEmeraldMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflEmeraldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flEmerald" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflAquamarine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flAquamarine"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflAquamarine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flAquamarineMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflAquamarineLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flAquamarine" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/gemBar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray"
+                    app:srcCompat="@android:drawable/bottom_bar" />
+
+                <LinearLayout
+                    android:id="@+id/lohAmethyst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Amethyst"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblAmethyst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/AmethystMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblAmethystLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Amethyst" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohDiamond"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Diamond"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblDiamond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/DiamondMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblDiamondLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Diamond" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohAquamarine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Aquamarine"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblAquamarine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/AquamarineMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblAquamarineLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Aquamarine" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohEmerald"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Emerald"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblEmerald"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/EmeraldMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblEmeraldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Emerald" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohOpal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Opal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblOpal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/OpalMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblOpalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Opal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohRuby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Ruby"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblRuby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/RubyMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblRubyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Ruby" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohSapphire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Sapphire"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblSapphire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/SapphireMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblSapphireLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Sapphire" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohTopaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Topaz"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblTopaz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/TopazMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblTopazLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Topaz" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/gemBar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray"
+                    app:srcCompat="@android:drawable/bottom_bar" />
+
+                <LinearLayout
+                    android:id="@+id/lohflessAquamarine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessAquamarine"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessAquamarine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessAquamarineMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessAquamarineLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessAquamarine" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflessAmethyst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessAmethyst"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessAmethyst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessAmethystMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessAmethystLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessAmethyst" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflessEmerald"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessEmerald"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessEmerald"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessEmeraldMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessEmeraldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessEmerald" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflessTopaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessTopaz"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessTopaz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessTopazMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessTopazLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessTopaz" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflessRuby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessRuby"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessRuby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessRubyMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessRubyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessRuby" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflessSapphire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessSapphire"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessSapphire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessSapphireMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessSapphireLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessSapphire" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflessDiamond"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessDiamond"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessDiamond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessDiamondMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessDiamondLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessDiamond" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohflessOpal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/flessOpal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblflessOpal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/flessOpalMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblflessOpalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flessOpal" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/gemBar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray"
+                    app:srcCompat="@android:drawable/bottom_bar" />
+
+                <LinearLayout
+                    android:id="@+id/lohpEmerald"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pEmerald"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpEmerald"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pEmeraldMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpEmeraldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pEmerald" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohpSapphire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pSapphire"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpSapphire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pSapphireMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpSapphireLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pSapphire" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohpRuby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pRuby"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpRuby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pRubyMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpRubyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pRuby" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohpTopaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pTopaz"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpTopaz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pTopazMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpTopazLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pTopaz" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohpAmethyst"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pAmethyst"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpAmethyst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pAmethystMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpAmethystLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pAmethyst" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohpDiamond"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pDiamond"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpDiamond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pDiamondMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpDiamondLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pDiamond" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohpAquamarine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pAquamarine"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpAquamarine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pAquamarineMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpAquamarineLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pAquamarine" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lohpOpal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pOpal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="addGem"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/lblpOpal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/pOpalMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:onClick="remGem"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/lblpOpalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pOpal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/bar1"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:background="@color/gray"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/currentGems" />
+
+        <TextView
+            android:id="@+id/txtCurrentGems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
